@@ -1,6 +1,6 @@
 const path = require("path");
 
-const RuiosPlugin = require("../../plugin/ruios/index");
+const RuiosPlugin = require("./plugin/ruios/index");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
@@ -29,7 +29,7 @@ module.exports = {
 			{
 				test: /\.ruios$/,
 				use: [
-					{ loader: path.resolve(__dirname, "../../loader/ruios/index.js") }
+					{ loader: path.resolve(__dirname, "./loader/ruios/index.js") }
 				]
 			},
 			{
