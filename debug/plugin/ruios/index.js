@@ -2,8 +2,22 @@ const PluginName = "RuiosWebpackPlugin";
 
 module.exports = class {
 	apply(complier) {
-		complier.hooks.run.tap(PluginName, compilation => {
-			console.log("webpack 构建过程开始！");
+		// addEntry
+		// complier.hooks.compilation.tap(PluginName, compilation => {
+		// 	compilation.hooks.addEntry.tap(PluginName, (entry, name) =>
+		// 		console.log(entry)
+		// 	);
+		// });
+
+		// normalModuleFactory
+		complier.hooks.normalModuleFactory.tap(PluginName, normalModuleFactory => {
+			normalModuleFactory.hooks.beforeResolve.tapAsync(
+				PluginName,
+				(res, cb) => {
+					console.log("beforeResolve", res);
+					cb();
+				}
+			);
 		});
 	}
 };

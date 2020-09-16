@@ -26,12 +26,12 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{
-				test: /\.ruios$/,
-				use: [
-					{ loader: path.resolve(__dirname, "./loader/ruios/index.js") }
-				]
-			},
+			// {
+			// 	test: /\.ruios$/,
+			// 	use: [
+			// 		{ loader: path.resolve(__dirname, "./loader/ruios/index.js") }
+			// 	]
+			// },
 			{
 				test: /\.css$/,
 				use: "css-loader"
