@@ -1,6 +1,6 @@
 import {func1} from '@utils/util1';
 import {func2} from '../utils/util2';
-import ruios from 'ruios-loader!./loader.ruios';
+import ruios from './loader.ruios';
 
 import './style.css'
 

@@ -1,9 +1,10 @@
 // main.js
-import { A } from './a'
-import B from './b'
-console.log(A)
-B()
+import { A } from "./a";
+import B from "./b";
 
-export default function () {
-	console.log(A)
+console.log(A);
+B();
+
+export default function() {
+	console.log(A);
 }

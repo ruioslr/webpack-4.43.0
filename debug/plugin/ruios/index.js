@@ -14,7 +14,6 @@ module.exports = class {
 			normalModuleFactory.hooks.beforeResolve.tapAsync(
 				PluginName,
 				(res, cb) => {
-					console.log("beforeResolve", res);
 					cb();
 				}
 			);

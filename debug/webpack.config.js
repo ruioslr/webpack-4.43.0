@@ -17,6 +17,7 @@ module.exports = {
 		path: path.resolve(__dirname, "./disc")
 	},
 	resolve: {
+		// extensions: ['.wasm', '.mjs', '.js', '.json'], // 这个配置，是可以引入的时候不需要加后缀名
 		alias: {
 			"@utils": path.resolve(__dirname, "./utils")
 		}
@@ -26,12 +27,10 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			// {
-			// 	test: /\.ruios$/,
-			// 	use: [
-			// 		{ loader: path.resolve(__dirname, "./loader/ruios/index.js") }
-			// 	]
-			// },
+			{
+				test: /\.ruios$/,
+				use: [{ loader: path.resolve(__dirname, "./loader/ruios/index.js") }]
+			},
 			{
 				test: /\.css$/,
 				use: "css-loader"
