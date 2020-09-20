@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+// cli 入口
 // @ts-ignore
 process.exitCode = 0;
 
@@ -100,6 +101,7 @@ if (installedClis.length === 0) {
 
 	const isYarn = fs.existsSync(path.resolve(process.cwd(), "yarn.lock"));
 
+	// 帮助下载缺省包
 	const packageManager = isYarn ? "yarn" : "npm";
 	const installOptions = [isYarn ? "add" : "install", "-D"];
 
